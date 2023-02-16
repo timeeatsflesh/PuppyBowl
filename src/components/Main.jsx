@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Navbar } from "./";
-import {GetAllpuppiesWithfetch} from "./"
+import { Players } from "./";
+import {GetAllPuppiesWithFetch} from "./"
 
 const Main = () => {
-    const [AllThePuppies, setAllPuppies] = useState([]);
+    const [allThePuppies, setAllPuppies] = useState([]);
     
     async function getAllPuppies() {
         try {
-            const data = await GetAllpuppiesWithfetch();
+            const data = await GetAllPuppiesWithFetch();
             setAllPuppies(data)
-            
         } catch (error) {
             console.log(error)
         }
@@ -21,6 +21,7 @@ const Main = () => {
     return(
         <div id="main">
             <Navbar />
+            <Players allThePuppies={allThePuppies}/>
             
         </div>
     )
