@@ -7,8 +7,10 @@ const GetAllPuppiesWithFetch = async () => {
         const data = await response.json();
         const puppies = data.data.players
         return puppies
+        
     } catch (error) {
         console.log(error)
     }
 }
+
 export default GetAllPuppiesWithFetch
