@@ -1,38 +1,41 @@
 import React, {useEffect, useState} from "react";
 import { Link, useParams } from "react-router-dom";
-import GetAllPuppiesWithFetch from "../ApiAdapter";
+import { GetPuppyWithFetch } from "../ApiAdapter";
 
 const AboutPuppy = () =>{
-    const [allThePuppies, setAllPuppies] = useState([]);
+    const [thePuppy, setThePuppy] = useState({});
+    let { id } = useParams();
     
-  async function getAllPuppies() {
+  async function getPuppy() {
       try {
-          const data = await GetAllPuppiesWithFetch();
-          setAllPuppies(data)
+          const data = await GetPuppyWithFetch(id);
+          setThePuppy(data)
       } catch (error) {
           console.log(error)
       }
   } 
   
   useEffect(() => {
-      getAllPuppies();
-  },[])
+      getPuppy(id);
+  },[id])
+console.log(getPuppy)
 
-let { id } = useParams();
-
-    return (
-        <div>
-        {allThePuppies.map((puppy, idx) => {
-          return (
-            <div className="puppy" key={`Puppy ${idx}`}>
-                { id ? <h1>{puppy.id}</h1> : <h1></h1> }
+return (
+    <div>
+         {thePuppy !==undefined ? thePuppy.name:null}
+        </div>
+    //     <div>
+    //     {thePuppy.map((puppy, idx) => {
+    //       return (
+    //         <div className="puppy" key={`Puppy ${idx}`}>
+    //             { id ? <h1>{puppy.id}</h1> : <h1></h1> }
             
-                <Link to ={`/`}>Go Back</Link>
+                // <Link to ={`/`}>Go Back</Link>
              
-            </div>
-          );
-        })}
-      </div>
+    //         </div>
+    //       );
+    //     })}
+    //   </div>
         )
     }
     
