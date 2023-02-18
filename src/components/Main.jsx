@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import { Navbar } from "./";
+import { Navbar, PuppySearch } from "./";
 import { Players } from "./";
 import {GetAllPuppiesWithFetch} from "./"
 
@@ -10,6 +10,7 @@ const Main = () => {
         <div id="main">
             <Navbar />
             <Outlet />
+            <PuppySearch />
         </div>
     )
 }

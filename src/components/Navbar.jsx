@@ -1,11 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import PuppySearch from "./PuppySearch";
 
 const Navbar = () => {
   return (
-    <div id="navbar">
-      <h2> I am navbar</h2>
-      
-    </div>
+    <nav>
+      <Link to="/">Home</Link>
+      <PuppySearch />
+    </nav>
   );
 };
 

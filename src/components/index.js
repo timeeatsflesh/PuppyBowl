@@ -4,3 +4,4 @@ export { default as Players } from "./Players";
 export { default as GetAllPuppiesWithFetch } from "../ApiAdapter/index"
 export { default as AboutPuppy} from "./AboutPuppy"
 export { GetPuppyWithFetch} from "../ApiAdapter"
+export { default as PuppySearch} from "./PuppySearch"
