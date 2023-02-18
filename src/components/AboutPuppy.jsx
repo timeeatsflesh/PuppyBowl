@@ -22,20 +22,15 @@ console.log(getPuppy)
 
 return (
     <div>
-         {thePuppy !==undefined ? thePuppy.name:null}
+         <h1>Name: {thePuppy !==undefined ? thePuppy.name:null}</h1>
+         <h1>Breed: {thePuppy !==undefined ? thePuppy.breed:null}</h1>
+         <h1>Status: {thePuppy !==undefined ? thePuppy.status:null}</h1>
+         <h1>CohortID: #{thePuppy !==undefined ? thePuppy.cohortId:null}</h1>
+         <h1>TeamID: #{thePuppy !==undefined ? thePuppy.teamId:null}</h1>
+         <h1>ID: #{thePuppy !==undefined ? thePuppy.id:null}</h1>
+         <img src={thePuppy !==undefined ? thePuppy.imageUrl:null}/>
+         <Link to ={`/`}>Go Back</Link>
         </div>
-    //     <div>
-    //     {thePuppy.map((puppy, idx) => {
-    //       return (
-    //         <div className="puppy" key={`Puppy ${idx}`}>
-    //             { id ? <h1>{puppy.id}</h1> : <h1></h1> }
-            
-                // <Link to ={`/`}>Go Back</Link>
-             
-    //         </div>
-    //       );
-    //     })}
-    //   </div>
         )
     }
     
