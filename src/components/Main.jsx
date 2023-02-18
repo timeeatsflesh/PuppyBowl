@@ -9,8 +9,8 @@ const Main = () => {
     return(
         <div id="main">
             <Navbar />
-            <Outlet />
             <PuppySearch />
+            <Outlet />
         </div>
     )
 }

@@ -29,8 +29,8 @@ const PuppySearch = () => {
         <div key={puppy.id}>
           <Link to={`/puppies/${puppy.id}`}>
             <h3>{puppy.name}</h3>
+            <h3>{puppy.breed}</h3>
           </Link>
-          <p>{puppy.breed}</p>
         </div>
       ))}
     </div>
