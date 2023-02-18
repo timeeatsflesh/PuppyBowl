@@ -21,17 +21,19 @@ const AboutPuppy = () =>{
 console.log(getPuppy)
 
 return (
-    <div>
-         <h1>Name: {thePuppy !==undefined ? thePuppy.name:null}</h1>
-         <h1>Breed: {thePuppy !==undefined ? thePuppy.breed:null}</h1>
-         <h1>Status: {thePuppy !==undefined ? thePuppy.status:null}</h1>
-         <h1>CohortID: #{thePuppy !==undefined ? thePuppy.cohortId:null}</h1>
-         <h1>TeamID: #{thePuppy !==undefined ? thePuppy.teamId:null}</h1>
-         <h1>ID: #{thePuppy !==undefined ? thePuppy.id:null}</h1>
-         <img src={thePuppy !==undefined ? thePuppy.imageUrl:null}/>
-         <Link to ={`/`}>Go Back</Link>
+    <div id="puppyPage">
+         <img id="profilePic" src={thePuppy !==undefined ? thePuppy.imageUrl:null}/>
+         <div id="puppyDetails">
+         <h1 className="details" >Name: {thePuppy !==undefined ? thePuppy.name:null}</h1>
+         <h1 className="details">Breed: {thePuppy !==undefined ? thePuppy.breed:null}</h1>
+         <h1 className="details">Status: {thePuppy !==undefined ? thePuppy.status:null}</h1>
+         <h1 className="details">CohortID: #{thePuppy !==undefined ? thePuppy.cohortId:null}</h1>
+         <h1 className="details">TeamID: #{thePuppy !==undefined ? thePuppy.teamId:null}</h1>
+         <h1 className="details">ID: #{thePuppy !==undefined ? thePuppy.id:null}</h1>
+        <Link id="goBackToPlayers" to ={`/`}>Go Back To Players</Link>
+         </div>
         </div>
         )
     }
     
-export default AboutPuppy
+    export default AboutPuppy

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PuppySearch from "./PuppySearch";
+// import PuppySearch from "./PuppySearch";
 
 const Navbar = () => {
   return (
     <nav>
-      <Link to="/">Home</Link>
-      <PuppySearch />
+      <Link id="homeButton" to="/">Home</Link>
+      {/* <PuppySearch /> */}
     </nav>
   );
 };

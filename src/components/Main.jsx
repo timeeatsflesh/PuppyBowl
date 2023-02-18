@@ -9,7 +9,7 @@ const Main = () => {
     return(
         <div id="main">
             <Navbar />
-            <PuppySearch />
+             <h2 id="searchBar">Name: <PuppySearch /></h2>
             <Outlet />
         </div>
     )
